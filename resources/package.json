@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "axios": "^0.16.2",
+    "iview": "^2.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.0.5",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "poi": "^9.2.3"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development poi index.js",
+    "build": "cross-env NODE_ENV=production poi build index.js",
+    "watch": "cross-env NODE_ENV=production poi watch index.js"
+  }
+}

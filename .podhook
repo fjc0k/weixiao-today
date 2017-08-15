@@ -1,0 +1,2 @@
+yarn run install:required-dependencies
+yarn run build:front-end

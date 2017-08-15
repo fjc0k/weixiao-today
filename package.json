@@ -1,0 +1,41 @@
+{
+  "engines": {
+    "node": ">= 7.6.0"
+  },
+  "name": "weixiao-today",
+  "description": "今天：校历第几周？开学多少天？还有多少天放假？",
+  "author": {
+    "name": "Funch",
+    "email": "fjc0kb@gmail.com"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "crypto": "^0.0.3",
+    "koa": "^2.3.0",
+    "koa-ejs": "^4.1.0",
+    "koa-json": "^2.0.2",
+    "koa-router": "^7.2.1",
+    "koa-static": "^4.0.1",
+    "lodash": "^4.17.4",
+    "md5": "^2.2.1",
+    "moment": "^2.18.1",
+    "mongoose": "^4.11.6",
+    "qs": "^6.5.0",
+    "randomstring": "^1.1.5",
+    "raw-body": "^2.3.0",
+    "xml2js": "^0.4.17"
+  },
+  "devDependencies": {
+    "jest": "^20.0.4"
+  },
+  "scripts": {
+    "test": "jest",
+    "install:required-dependencies": "yarn && cd ./resources && yarn --prod=false",
+    "build:front-end": "cd ./resources && yarn run build"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}

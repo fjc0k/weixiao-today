@@ -1,0 +1,13 @@
+module.exports = {
+  port: 5201,
+  mongodb: 'mongodb://localhost:27017/today',
+  weixiao: {
+    key: '',
+    secret: '',
+    token: ''
+  },
+  cdn: '',
+  defaultMessage: '今天是[年]年[月]月[日]日。\n\n' +
+                  '[学校]校历第[校历周]周，星期[星期]。\n\n' +
+                  '[嘿哈]开学已经[已开学天数]天啦。'
+};
