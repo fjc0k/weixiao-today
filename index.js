@@ -1,7 +1,7 @@
 const Koa = require('koa');
 const koaJson = require('koa-json')({ pretty: false });
 const render = require('koa-ejs');
-const serve = require('koa-static');
+const serveStatic = require('koa-static');
 const path = require('path');
 const route = require('./routers');
 const { port } = require('./config');
@@ -19,7 +19,12 @@ render(app, {
 
 app.use(koaJson);
 
-app.use(serve(path.join(__dirname, './views')));
+app.use(
+  serveStatic(
+    path.join(__dirname, './views'),
+    { maxage: 2592000000 /* 单位: 毫秒, 30天 */ }
+  )
+);
 
 route(app);
 
