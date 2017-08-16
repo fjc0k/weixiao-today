@@ -27,7 +27,7 @@ module.exports = class Today extends Model {
     });
   }
   async updateMediaInfo(mediaId, { mediaName, schoolName, avatarImage }) {
-    avatarImage = avatarImage.replace(/http:/, 'https:');
+    avatarImage = avatarImage.replace('http:', 'https:');
     await this.model.update({ mediaId }, {
       mediaInfo: { mediaName, schoolName, avatarImage }
     });
