@@ -22,11 +22,34 @@
       </div>
     </div>
 
+    <!-- 底部 -->
+    <div class="fakeWechat-footer">
+      <div>
+        <icon name="switch"></icon>
+      </div>
+      <div class="fakeWechat-footer__separator"></div>
+      <div>
+        <icon name="voice"></icon>
+      </div>
+      <div class="fakeWechat-footer__input">
+        <input type="text">
+      </div>
+      <div>
+        <icon name="emotion"></icon>
+      </div>
+      <div>
+        <icon name="extra"></icon>
+      </div>
+    </div>
+
   </div>
 </template>
 
 <script>
+  import icon from './icon';
+
   export default {
+    components: { icon },
     props: {
       config: {
         type: Object,
@@ -44,10 +67,12 @@
 </script>
 
 <style lang="less">
+
+  @bodyBgColor: #eee;
+  @footerBorderColor: darken(@bodyBgColor, 10%);
+
   .fakeWechat {
-    background: rgba(204, 204, 204, 0.55);
-    height: 450px;
-    overflow-y: auto;
+    position: relative;
     &-header {
       display: flex;
       justify-content: space-between;
@@ -65,6 +90,47 @@
       display: -webkit-box;
       -webkit-box-orient: vertical;
       text-align: center;
+    }
+    &-body {
+      height: 400px;
+      padding-bottom: 60px;
+      background-color: @bodyBgColor;
+      overflow-y: auto;
+      &::-webkit-scrollbar { // 隐藏滚动条
+        display: none;
+      }
+    }
+    &-footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+      color: #777;
+      border-top: .5px solid @footerBorderColor;
+      background: lighten(@bodyBgColor, 3%);
+      > div {
+        padding: 5px 3px;
+      }
+      &__separator {
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          border-right: .5px solid @footerBorderColor;
+        }
+      }
+      &__input {
+        flex: 1;
+        > input {
+          width: 100%;
+          border: .5px solid #dddee1;
+          border-radius: 4px;
+        }
+      }
     }
   }
   .bubble {
