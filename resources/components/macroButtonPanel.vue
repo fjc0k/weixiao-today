@@ -124,7 +124,6 @@
 </script>
 
 <style lang="less">
-  @import "../styles/today";
   .macroButtonPanel {
     text-align: center;
     .divider {
