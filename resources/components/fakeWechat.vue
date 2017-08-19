@@ -46,10 +46,7 @@
 </template>
 
 <script>
-  import icon from './icon';
-
   export default {
-    components: { icon },
     props: {
       config: {
         type: Object,

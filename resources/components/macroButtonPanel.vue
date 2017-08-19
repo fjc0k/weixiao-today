@@ -59,14 +59,12 @@
 </template>
 
 <script>
-  import icon from './icon.vue';
   import divider from './divider.vue';
   import macroButton from './macroButton.vue';
   import wechatEmotionPanel from './wechatEmotionPanel.vue';
 
   export default {
     components: {
-      icon,
       divider,
       macroButton,
       wechatEmotionPanel
