@@ -44,7 +44,7 @@
     <Row>
       <macroButton
         label="打赏开发者10角钱"
-        type="default"
+        type="dashed"
         :poptip="{
           position: 'top',
           width: '230'

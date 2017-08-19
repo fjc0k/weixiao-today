@@ -71,7 +71,14 @@
             saveConfig: false
           }
         },
-        config: {},
+        config: {
+          keywords: [],
+          mediaInfo: {
+            mediaName: '',
+            avatarImage: ''
+          },
+          message: ''
+        },
         form: {
           config: {
             model: {
