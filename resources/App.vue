@@ -4,23 +4,37 @@
       <Col span="16">
         <Form ref="configForm" :label-width="80" :model="form.config.model" :rules="form.config.rules">
           <Form-item label="开学日期" prop="startDate">
-            <Date-picker
-              v-model="form.config.model.startDate"
-              type="date"
-              format="yyyy年M月d日"
-              placeholder="点击选择开学日期"
-              style="width:100%"
-            ></Date-picker>
+            <Row>
+              <Col span="14">
+                <Date-picker
+                  v-model="form.config.model.startDate"
+                  type="date"
+                  format="yyyy年M月d日"
+                  placeholder="点击选择开学日期"
+                  style="width:100%"
+                ></Date-picker>
+              </Col>
+              <Col span="10" style="padding-left:15px">
+                这里的开学日期指校历第一周星期一的日期。
+              </Col>
+            </Row>
           </Form-item>
 
           <Form-item label="放假日期" prop="endDate">
-            <Date-picker
-              v-model="form.config.model.endDate"
-              type="date"
-              format="yyyy年M月d日"
-              placeholder="点击选择放假日期"
-              style="width:100%"
-            ></Date-picker>
+            <Row>
+              <Col span="14">
+                <Date-picker
+                  v-model="form.config.model.endDate"
+                  type="date"
+                  format="yyyy年M月d日"
+                  placeholder="点击选择放假日期"
+                  style="width:100%"
+                ></Date-picker>
+              </Col>
+              <Col span="10" style="padding-left:15px">
+                放假日期可空。
+              </Col>
+            </Row>
           </Form-item>
 
           <Form-item label="回复消息" prop="message">
