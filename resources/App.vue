@@ -15,7 +15,7 @@
                 ></Date-picker>
               </Col>
               <Col span="10" style="padding-left:15px">
-                这里的开学日期指校历第一周星期一的日期。
+                即校历第一周星期一的日期。
               </Col>
             </Row>
           </Form-item>
@@ -32,7 +32,7 @@
                 ></Date-picker>
               </Col>
               <Col span="10" style="padding-left:15px">
-                放假日期可空。
+                可空。
               </Col>
             </Row>
           </Form-item>
