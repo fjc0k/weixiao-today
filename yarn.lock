@@ -2415,9 +2415,9 @@ webidl-conversions@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-4.0.1.tgz#8015a17ab83e7e1b311638486ace81da6ce206a0"
 
-weixiao.js@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/weixiao.js/-/weixiao.js-2.0.0.tgz#c7e4ff6917d22415bb31f7617a1872c4b077d47e"
+weixiao.js@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/weixiao.js/-/weixiao.js-2.1.0.tgz#b7ae266e8348e8f7c61390c5f9b6052c35fccff6"
   dependencies:
     axios "^0.16.2"
     blueimp-md5 "^2.7.0"
