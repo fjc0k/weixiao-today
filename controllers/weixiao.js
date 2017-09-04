@@ -1,4 +1,5 @@
-const { Body, Weixiao, SchoolCalendar } = require('../services');
+const Weixiao = require('weixiao.js');
+const { Body, SchoolCalendar } = require('../services');
 const { weixiao: api } = require('../config');
 const { today } = require('../models');
 const _ = require('lodash');
