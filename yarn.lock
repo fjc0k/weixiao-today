@@ -1499,9 +1499,9 @@ koa-static@^4.0.1:
     debug "^2.6.8"
     koa-send "^4.1.0"
 
-koa-weixiao-controller@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/koa-weixiao-controller/-/koa-weixiao-controller-1.0.1.tgz#8dfbe4dcd43b80a0b2c94b65d5386d3a59ca1ea9"
+koa-weixiao-controller@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/koa-weixiao-controller/-/koa-weixiao-controller-1.0.2.tgz#bccad1624de86f0b3768f2a28babef89380176a2"
   dependencies:
     lodash "^4.17.4"
     qs "^6.5.0"

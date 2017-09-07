@@ -31,12 +31,12 @@ module.exports = weixiaoController({
     async keyword(ctx, { body, mediaId }) {
       await today.updateKeywords(mediaId, body.keyword);
     },
-    async config(ctx, { mediaId }) {
+    async config(ctx, { mediaId, weixiao }) {
       const config = await today.getConfig(mediaId);
       if (!config.mediaInfo.mediaName) {
 
         // 公众号信息获取与更新
-        const mediaInfo = await wx.getMediaInfo(mediaId);
+        const mediaInfo = await weixiao.getMediaInfo(mediaId);
         await today.updateMediaInfo(mediaId, {
           mediaName: mediaInfo.name,
           schoolName: mediaInfo.school_name,
@@ -44,7 +44,7 @@ module.exports = weixiaoController({
         });
 
         // 关键词获取与更新
-        const keywords = await wx.getMediaKeywords(mediaId);
+        const keywords = await weixiao.getMediaKeywords(mediaId);
         await today.updateKeywords(mediaId, keywords);
 
         // 学校名字替换
