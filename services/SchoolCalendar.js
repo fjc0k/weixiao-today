@@ -11,14 +11,19 @@ module.exports = class SchoolCalendar {
     this.currentDate = moment(new Date());
   }
 
+  diffDays(m1, m2) {
+    // 仅年月日参与计算, 以免产生误差
+    return moment(m2.format('YYYY-MM-DD')).diff(
+      moment(m1.format('YYYY-MM-DD')),
+      'days'
+    );
+  }
+
   getDetail() {
     const { startDate, endDate, currentDate } = this;
     const { abs, floor, ceil } = Math;
-
-    // 间隔天数应向上取整
-    const passedDays = ceil(abs(currentDate.diff(startDate, 'days', true)));
-    const remainingDays = ceil(abs(currentDate.diff(endDate, 'days', true)));
-    
+    const passedDays = abs(this.diffDays(startDate, currentDate));
+    const remainingDays = abs(this.diffDays(currentDate, endDate));
     const passedWeeks = passedDays / 7;
 
     return {
