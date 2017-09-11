@@ -14,8 +14,11 @@ module.exports = class SchoolCalendar {
   getDetail() {
     const { startDate, endDate, currentDate } = this;
     const { abs, floor, ceil } = Math;
+
+    // 间隔天数应向上取整
     const passedDays = ceil(abs(currentDate.diff(startDate, 'days', true)));
     const remainingDays = ceil(abs(currentDate.diff(endDate, 'days', true)));
+    
     const passedWeeks = passedDays / 7;
 
     return {
