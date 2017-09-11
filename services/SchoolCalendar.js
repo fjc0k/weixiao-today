@@ -6,13 +6,14 @@ module.exports = class SchoolCalendar {
     startDate,
     endDate
   }) {
-    this.startDate = moment(startDate);
-    this.endDate = moment(endDate);
-    this.currentDate = moment(new Date());
+    const now = new Date();
+    this.startDate = moment(startDate || now);
+    this.endDate = moment(endDate || now);
+    this.currentDate = moment(now);
   }
 
   diffDays(m1, m2) {
-    // 仅年月日参与计算, 以免产生误差
+    // 仅年月日参与天数间隔计算, 以免产生误差
     return moment(m2.format('YYYY-MM-DD')).diff(
       moment(m1.format('YYYY-MM-DD')),
       'days'
