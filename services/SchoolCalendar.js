@@ -14,8 +14,8 @@ module.exports = class SchoolCalendar {
   getDetail() {
     const { startDate, endDate, currentDate } = this;
     const { abs, floor, ceil } = Math;
-    const passedDays = abs(currentDate.diff(startDate, 'days'));
-    const remainingDays = abs(currentDate.diff(endDate, 'days'));
+    const passedDays = ceil(abs(currentDate.diff(startDate, 'days', true)));
+    const remainingDays = ceil(abs(currentDate.diff(endDate, 'days', true)));
     const passedWeeks = passedDays / 7;
 
     return {
